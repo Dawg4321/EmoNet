@@ -62,6 +62,7 @@ class AudioDataGenerator(Sequence):
         self.variable_duration = variable_duration
         self.files = []
         self.classes = []
+        print(self)
         with open(csv_file) as f:
             reader = csv.reader(f, delimiter=',')
             header = next(reader)

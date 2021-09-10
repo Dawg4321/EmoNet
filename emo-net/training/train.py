@@ -422,6 +422,8 @@ def train_multi_task(
         base_nb_classes=nb_classes,
         learnall=True,
         base_tasks=tasks,
+        new_tasks=[],
+        new_nb_classes=[],
         base_weight_decays=decays if individual_weight_decay else None,
         random_noise=random_noise,
         input_bn=input_bn,
