@@ -62,6 +62,8 @@ class OptionEatAll(click.Option):
                 # grab everything remaining
                 value += state.rargs
                 state.rargs[:] = []
+            print(value)
+            print(type(value))
             value = tuple(value)
 
             # call the actual process
@@ -935,7 +937,8 @@ def evaluate_cnn(data_path,
               '--tasks',
               required=True,
               help='Names of the tasks that are trained.',
-              cls=OptionEatAll)
+#              cls=OptionEatAll)
+              multiple=True)
 @click.option(
     '-bs',
     '--batch-size',
